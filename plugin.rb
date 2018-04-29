@@ -7,9 +7,7 @@
 
 enabled_site_setting :awesomeness_enabled
 
-# 告诉 Discourse 需要一个链接
 add_admin_route 'purple_tentacle.title', 'purple-tentacle'
-
 
 Discourse::Application.routes.append do
   get '/admin/plugins/purple-tentacle' => 'admin/plugins#index', constraints: StaffConstraint.new
